@@ -1,5 +1,5 @@
 const { MongoClient } = require("mongodb");
-const connectionString = 'mongodb://localhost:27017';
+const connectionString = 'mongodb://localhost:27017'
 const client = new MongoClient(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -14,7 +14,7 @@ module.exports = {
         return callback(err);
       }
 
-      dbConnection = db.db("sample_airbnb");
+      dbConnection = db.db("users");
       console.log("Successfully connected to MongoDB.");
 
       return callback();
